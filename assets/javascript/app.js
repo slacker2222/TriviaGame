@@ -6,11 +6,11 @@ $( document ).ready(function() {
     // this game object holds all of the questions, possible answers, and then the index of the correct answer for each
         var game = {
             
-            questions: [
+            questions:[
             {
                    question: 'How many Cleveland Browns players have made the Pro Football Hall of Fame?',
-                   possibles: ['16', '12', '8', '4'],
-                   id: 'question-one',
+                   possibles: ['16', '12', '8', '4'], 
+                   id: 'question-one', 
                    answer: 0
             }, {
                 question: 'Who was the first Browns player to make it into the Hall of Fame?',
@@ -33,13 +33,13 @@ $( document ).ready(function() {
                 id: 'question-five',
                 answer: 2
             }, {
-                question: 'The CLeveland Browns are named after...',
+                question: 'The Cleveland Browns are named after...',
                 possibles: ['Bernie Brown', 'Betty Crocker Brownies', 'Jim Brown', 'Paul Brown',],
                 id: 'question-six',
                 answer: 3
     
             }, {
-                question: 'The Quarterback witht he most starts (116) for the Browns was...',
+                question: 'The Quarterback with the most starts (116) for the Browns was...',
                 possibles: ['Otto Graham', 'Frank Ryan', 'Brian Sipe', 'Bernie Kosar',],
                 id: 'question-seven',
                 answer: 0
@@ -59,17 +59,12 @@ $( document ).ready(function() {
                 id: 'question-ten',
                 answer: 4
             }, {
-                question: 'Who is CLevelands all-time receiving leader?',
+                question: 'Who is Clevelands all-time receiving leader?',
                 possibles: ['Ozzie Newsome', 'Jim Brown', 'Paul Warfield', 'Webster Slaughter', 'Dante Lavelli'],
                 id: 'question-eleven',
                 answer: 0
             }
-            // }, {
-            //     question: 'What is the best kind of coffee?',
-            //     possibles: ['Intelligentsia', 'Blue Bottle', 'Starbucks', 'Caribou', 'none of the above'],
-            //     id: 'question-twelve',
-            //     answer: 4
-            // }
+            
             ]}
     
         // test
@@ -82,7 +77,7 @@ $( document ).ready(function() {
     // when the start button is clicked, the div with the questions that was hidden is shown
             $('.wrapper').show();
             console.log('hello');
-    
+            // and button is hidden
             $(this).hide();
         });
     
@@ -110,7 +105,7 @@ $( document ).ready(function() {
             // When the number is equal to zero, 
             if (number === 0){
             // run the stop function.
-            stop(); alert("Time is up, but no worries, you can try again!");
+            stop(); alert("Time is up, but hey, you can try again!");
             // Alert the user that time is up. Update the innerHTML of the message
            // div to say 'Game Over!'
             // alert('Time Up!')
@@ -141,13 +136,13 @@ $( document ).ready(function() {
         // Execute the run function.
         run();
     
-    // this function dynamically creates the inputs needed for the form and relates them to the
+    // this function creates the inputs needed for the form and relates them to the
     // items held within the game object 
     function formTemplate(data) {
     // the first variable relates the form field for question with the data in the object for
     // each question so that the questions can be inputed into that form field
         var qString = "<form id='questionOne'>"+ data.question +"<br>";
-    // this variable to access the question object's possibles array needed to answer each question
+    // access the question object's possibles array needed to answer each question
         var possibles = data.possibles;
     // a for loop to go through the possibles array for each question to add the values of each possibles
     // array and using qString, add them as radio buttons to the question to which they are
@@ -201,7 +196,7 @@ $( document ).ready(function() {
         var incorrect = 0;
         var unAnswered =0
     
-    // for loop iterates through each question and passes the questions at each index first into
+    // for loop through each question and passes the questions at each index first into
     // the isCorrect function to see if they match the indices of correct answers, and if they do,
     // increments up the correct score
         for (var i = 0; i<game.questions.length; i++) {
