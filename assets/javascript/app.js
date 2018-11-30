@@ -55,7 +55,7 @@ $( document ).ready(function() {
                 answer: 3
             }, {
                 question: 'The largest Browns Backers Club is in...',
-                possibles: ['Jackonsville, FLorida', 'Savannah, Georgia', 'Wilmington, North Carolina', 'New York, New York', 'Phoenix, Arizona'],
+                possibles: ['Jackonsville, Florida', 'Savannah, Georgia', 'Wilmington, North Carolina', 'New York, New York', 'Phoenix, Arizona'],
                 id: 'question-ten',
                 answer: 4
             }, {
@@ -82,7 +82,7 @@ $( document ).ready(function() {
         });
     
         // Number of seconds Guesser has 
-        var number = 60;
+        var number = 90;
         $('#timeLeft').on('click', run); 
 
         
@@ -150,7 +150,7 @@ $( document ).ready(function() {
         for (var i = 0; i < possibles.length; i++) {
             var possible = possibles[i];
             console.log(possible);
-            qString = qString + "<input type='radio' name='"+data.id+"' value="+ i +">"+possible;
+            qString = qString + "<input type='radio' name='"+data.id+"' value="+ i +" style='margin-left: 16' style='margin-right: 16'>" +possible;
     
         }
         return qString + "</form>";
